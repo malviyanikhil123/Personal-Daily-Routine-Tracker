@@ -1,0 +1,515 @@
+/* Logs Styles */
+.log-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.log-controls select {
+    padding: 0.5rem 1rem;
+    border: 2px solid #667eea;
+    border-radius: 5px;
+    background: white;
+    color: #333;
+    font-weight: 600;
+}
+
+.export-btn, .complete-week-btn {
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.export-btn:hover, .complete-week-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.complete-week-btn {
+    background: linear-gradient(135deg, #28a745, #20c997);
+}
+
+.complete-week-btn:hover {
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+}
+
+.logs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.daily-summary {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem;
+}
+
+.day-summary {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 15px;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.day-summary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.day-summary.today {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border: 2px solid #2196f3;
+}
+
+.day-summary.completed {
+    background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+    border: 2px solid #28a745;
+}
+
+.day-label {
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.day-visual-progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.progress-circle {
+    position: relative;
+}
+
+.progress-text {
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: 600;
+}
+
+/* Historical Summary */
+.historical-summary {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.historical-summary h3 {
+    color: #6c757d;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.historical-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.historical-stat-card {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid #dee2e6;
+    transition: all 0.3s ease;
+}
+
+.historical-stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.historical-stat-card.expired {
+    background: linear-gradient(135deg, #fff5f5, #fed7d7);
+    border-color: #feb2b2;
+}
+
+.historical-stat-card.average {
+    background: linear-gradient(135deg, #f0f4ff, #dbeafe);
+    border-color: #a5b4fc;
+}
+
+.historical-stat-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.historical-stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.historical-stat-card.expired .historical-stat-value {
+    color: #dc3545;
+}
+
+.historical-stat-card.average .historical-stat-value {
+    color: #6366f1;
+}
+
+.historical-stat-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-weight: 600;
+}
+
+.weekly-stats {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.overall-progress-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f8f9ff, #e8f2ff);
+    border-radius: 12px;
+    border: 1px solid #e0e6ff;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.progress-percentage {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #667eea;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 12px;
+    background: #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    transition: width 0.6s ease;
+    border-radius: 6px;
+}
+
+.progress-details {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.stat-card:hover::before {
+    opacity: 1;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.stat-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.stat-card.warning {
+    background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+}
+
+.stat-card.pending {
+    background: linear-gradient(135deg, #feca57, #ff9ff3);
+}
+
+.stat-card.devops {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.stat-card.cpp {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.stat-card.roadmap-total {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Incomplete Tasks Section */
+.incomplete-tasks {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.incomplete-tasks h3 {
+    color: #dc3545;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.expired-summary {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #fff5f5, #fee);
+    border-radius: 12px;
+    border: 1px solid #fecaca;
+}
+
+.expired-count-visual {
+    text-align: center;
+}
+
+.expired-circle {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    box-shadow: 0 8px 20px rgba(220, 53, 69, 0.3);
+    animation: pulse 2s infinite;
+}
+
+.expired-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.expired-text {
+    font-weight: 600;
+    color: #dc3545;
+    font-size: 1rem;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 8px 20px rgba(220, 53, 69, 0.3);
+    }
+    50% {
+        box-shadow: 0 8px 20px rgba(220, 53, 69, 0.6);
+    }
+    100% {
+        box-shadow: 0 8px 20px rgba(220, 53, 69, 0.3);
+    }
+}
+
+.incomplete-tasks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.incomplete-day-section {
+    border-left: 4px solid #dc3545;
+    padding-left: 1rem;
+    background: linear-gradient(90deg, rgba(220, 53, 69, 0.05), transparent);
+    border-radius: 0 8px 8px 0;
+}
+
+.incomplete-day-header {
+    font-weight: 700;
+    color: #dc3545;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.incomplete-day-header::before {
+    content: "📅";
+    font-size: 1rem;
+}
+
+.incomplete-tasks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.incomplete-task-item {
+    background: linear-gradient(135deg, #ffe6e6, #ffcccc);
+    padding: 1rem;
+    border-radius: 12px;
+    border-left: 4px solid #dc3545;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(220, 53, 69, 0.1);
+}
+
+.incomplete-task-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.2);
+}
+
+.incomplete-task-item.expired {
+    background: linear-gradient(135deg, #ffcccc, #ffaaaa);
+    border-left-color: #a71e2a;
+}
+
+.task-status {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+    box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
+}
+
+.no-incomplete-tasks {
+    text-align: center;
+    padding: 3rem;
+    color: #28a745;
+}
+
+.no-incomplete-tasks i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+    opacity: 0.7;
+}
+
+.no-incomplete-tasks p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #666;
+}
+
+/* Responsive Logs */
+@media (max-width: 768px) {
+    .log-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .logs-container {
+        gap: 1rem;
+    }
+    
+    .daily-summary,
+    .weekly-stats,
+    .incomplete-tasks {
+        padding: 1.5rem;
+    }
+    
+    .summary-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .incomplete-day-section {
+        padding-left: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .daily-summary,
+    .weekly-stats,
+    .incomplete-tasks {
+        padding: 1rem;
+    }
+    
+    .stat-value {
+        font-size: 1.5rem;
+    }
+    
+    .incomplete-tasks h3 {
+        font-size: 1.3rem;
+    }
+    
+    .incomplete-task-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+}

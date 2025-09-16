@@ -1,0 +1,190 @@
+/* Weekly Grid */
+.weekly-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Auto-reset information */
+.auto-reset-info {
+    background: linear-gradient(135deg, #e3f2fd 0%, #f1f8e9 100%);
+    border: 1px solid #81c784;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: #2e7d32;
+}
+
+.auto-reset-info i {
+    color: #4caf50;
+    font-size: 1.1rem;
+}
+
+.auto-reset-info span {
+    font-weight: 500;
+}
+
+.day-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.day-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.day-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #667eea;
+}
+
+.day-progress {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 600;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.task-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.task-item:hover {
+    background: #e9ecef;
+}
+
+.task-checkbox {
+    margin-top: 0.25rem;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.task-text {
+    flex: 1;
+    font-weight: 500;
+    color: #333;
+}
+
+.task-time {
+    font-size: 0.85rem;
+    color: #666;
+    white-space: nowrap;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #28a745;
+}
+
+/* Expired task styles */
+.task-item.expired {
+    background: #ffe6e6;
+    border-left: 4px solid #dc3545;
+}
+
+.task-item.expired .task-text {
+    color: #dc3545;
+    font-style: italic;
+}
+
+.task-item.expired .task-checkbox {
+    accent-color: #dc3545;
+}
+
+.task-item.expired:hover {
+    background: #ffdddd;
+}
+
+/* Task type color coding */
+.task-item[data-type="learning"] {
+    border-left: 4px solid #667eea;
+}
+
+.task-item[data-type="work"] {
+    border-left: 4px solid #28a745;
+}
+
+.task-item[data-type="project"] {
+    border-left: 4px solid #fd7e14;
+}
+
+.task-item[data-type="planning"] {
+    border-left: 4px solid #6f42c1;
+}
+
+.task-item[data-type="break"] {
+    border-left: 4px solid #20c997;
+}
+
+/* Responsive Weekly Grid */
+@media (max-width: 768px) {
+    .weekly-grid {
+        gap: 1rem;
+    }
+    
+    .day-card {
+        padding: 1rem;
+    }
+    
+    .day-header {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .day-name {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .task-item {
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+    
+    .task-text {
+        font-size: 0.9rem;
+    }
+    
+    .task-time {
+        font-size: 0.8rem;
+    }
+    
+    .day-name {
+        font-size: 1.1rem;
+    }
+}
