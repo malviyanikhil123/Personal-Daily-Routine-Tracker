@@ -24,7 +24,7 @@ export interface WeeklyHistory {
   endDate: string;
 }
 
-export type TabType = 'devops-roadmap' | 'cpp-roadmap' | 'weekly' | 'logs';
+export type TabType = 'devops-roadmap' | 'cpp-roadmap' | 'weekly' | 'logs' | 'analytics';
 
 export type StepStatus = 'not-started' | 'in-progress' | 'completed';
 
@@ -68,6 +68,11 @@ export interface LogEntry {
   completedAt?: string;
   expiredAt?: string;
   day?: string;
+  // Roadmap tracking fields
+  roadmapType?: 'devops' | 'cpp';
+  stepId?: number;
+  stepTitle?: string;
+  skill?: string; // The specific skill/subtopic completed
 }
 
 // Component Props Types

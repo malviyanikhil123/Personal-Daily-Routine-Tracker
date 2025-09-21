@@ -4,7 +4,7 @@ import type { RoadmapStep, WeeklyScheduleData, WeeklyTask } from '../types';
 export const devopsRoadmapData: RoadmapStep[] = [
   {
     id: 1,
-    title: "🏗️ Foundation Layer",
+    title: "🏗️ Step 1 — Foundation Layer",
     description: "Master the fundamental skills every DevOps engineer needs",
     skills: ["🐧 Linux", "🌐 Networking", "📚 Git"],
     details: {
@@ -16,7 +16,7 @@ export const devopsRoadmapData: RoadmapStep[] = [
   },
   {
     id: 2,
-    title: "🤖 Automation & Scripting",
+    title: "🤖 Step 2 — Automation & Scripting",
     description: "Automate repetitive tasks and integrate with APIs",
     skills: ["💻 Bash Scripting", "🐍 Python"],
     details: {
@@ -27,7 +27,7 @@ export const devopsRoadmapData: RoadmapStep[] = [
   },
   {
     id: 3,
-    title: "☁️ Cloud Skills",
+    title: "☁️ Step 3 — Cloud Skills",
     description: "Deploy and manage applications in the cloud",
     skills: ["🟠 AWS", "🔵 Azure", "🟡 GCP"],
     details: {
@@ -37,7 +37,7 @@ export const devopsRoadmapData: RoadmapStep[] = [
   },
   {
     id: 4,
-    title: "📦 Containerization",
+    title: "📦 Step 4 — Containerization",
     description: "Run and manage applications in isolated environments",
     skills: ["🐳 Docker", "⛵ Kubernetes"],
     details: {
@@ -48,7 +48,7 @@ export const devopsRoadmapData: RoadmapStep[] = [
   },
   {
     id: 5,
-    title: "🔄 CI/CD",
+    title: "🔄 Step 5 — CI/CD",
     description: "Automate build, test, and deployment processes",
     skills: ["🏗️ Jenkins"],
     details: {
@@ -58,7 +58,7 @@ export const devopsRoadmapData: RoadmapStep[] = [
   },
   {
     id: 6,
-    title: "⚖️ Web & Load Balancing",
+    title: "⚖️ Step 6 — Web & Load Balancing",
     description: "Serve applications and balance traffic efficiently",
     skills: ["🌐 Nginx"],
     details: {
@@ -68,7 +68,7 @@ export const devopsRoadmapData: RoadmapStep[] = [
   },
   {
     id: 7,
-    title: "🏛️ Infrastructure as Code",
+    title: "🏛️ Step 7 — Infrastructure as Code",
     description: "Automate infrastructure and server configuration",
     skills: ["🌍 Terraform", "⚙️ Ansible"],
     details: {
@@ -79,13 +79,26 @@ export const devopsRoadmapData: RoadmapStep[] = [
   },
   {
     id: 8,
-    title: "📊 Monitoring & Security",
+    title: "📊 Step 8 — Monitoring & Security",
     description: "Keep systems monitored, secure, and observable",
     skills: ["📈 Prometheus", "📊 Grafana", "🔒 DevSecOps"],
     details: {
       "📈 Prometheus": "Collect system metrics.",
       "📊 Grafana": "Visualize monitoring data.",
       "🔒 DevSecOps": "Keep systems safe with security best practices."
+    },
+    status: "not-started"
+  },
+  {
+    id: 9,
+    title: "🚀 Step 9 — Advanced DevOps & Production",
+    description: "Master advanced concepts for production-ready systems",
+    skills: ["🔧 Service Mesh", "📋 Logging & Observability", "⚡ Performance Optimization", "🔄 GitOps"],
+    details: {
+      "🔧 Service Mesh": "Learn Istio/Linkerd for microservices communication, traffic management, and security policies.",
+      "📋 Logging & Observability": "Implement centralized logging with ELK Stack (Elasticsearch, Logstash, Kibana) and distributed tracing.",
+      "⚡ Performance Optimization": "Optimize application performance, resource utilization, and cost management in cloud environments.",
+      "🔄 GitOps": "Implement GitOps workflows with ArgoCD/Flux for automated deployments and infrastructure management."
     },
     status: "not-started"
   }

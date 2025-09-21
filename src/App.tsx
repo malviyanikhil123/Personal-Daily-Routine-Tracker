@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Header, ToastContainer } from './components';
-import { DevOpsRoadmapPage, CppRoadmapPage, WeeklyTasksPage, DailyLogsPage } from './pages';
+import { DevOpsRoadmapPage, CppRoadmapPage, WeeklyTasksPage, DailyLogsPage, AnalyticsPage } from './pages';
 import { AppProvider } from './context';
 import { useToast, useApp } from './hooks';
 import type { TabType } from './types';
@@ -29,6 +29,8 @@ function AppContent() {
         return <WeeklyTasksPage />;
       case 'logs':
         return <DailyLogsPage />;
+      case 'analytics':
+        return <AnalyticsPage />;
       default:
         return <DevOpsRoadmapPage />;
     }
