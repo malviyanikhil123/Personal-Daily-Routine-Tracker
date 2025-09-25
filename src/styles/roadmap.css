@@ -5,18 +5,18 @@
 }
 
 .roadmap-step {
-    background: white;
+    background: #AED6CF;
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid #667eea;
+    box-shadow: 0 8px 25px rgba(100, 127, 188, 0.15);
+    border-left: 5px solid #647FBC;
     transition: all 0.3s ease;
     width: 100%;
 }
 
 .roadmap-step:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 35px rgba(100, 127, 188, 0.2);
 }
 
 .step-header {
@@ -28,7 +28,7 @@
 }
 
 .step-title {
-    color: #333;
+    color: #647FBC;
     font-size: 1.5rem;
     font-weight: 700;
 }
@@ -69,12 +69,13 @@
 }
 
 .skill-tag {
-    background: #f3f4f6;
-    color: #374151;
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
+    background: #FAFDD6 !important;
+    color: #647FBC !important;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
     font-size: 0.85rem;
-    font-weight: 500;
+    font-weight: 600;
+    border: 1px solid rgba(100, 127, 188, 0.3);
 }
 
 .step-actions {
@@ -93,23 +94,25 @@
 }
 
 .btn-primary {
-    background: #667eea;
+    background: linear-gradient(135deg, #647FBC, #91ADC8);
     color: white;
 }
 
 .btn-primary:hover {
-    background: #5a67d8;
+    background: linear-gradient(135deg, #91ADC8, #AED6CF);
     transform: translateY(-2px);
 }
 
 .btn-secondary {
-    background: #f3f4f6;
-    color: #374151;
+    background: linear-gradient(135deg, rgba(145, 173, 200, 0.3), rgba(174, 214, 207, 0.3));
+    color: #647FBC;
+    border: 1px solid rgba(100, 127, 188, 0.3);
 }
 
 .btn-secondary:hover {
-    background: #e5e7eb;
+    background: linear-gradient(135deg, rgba(145, 173, 200, 0.4), rgba(174, 214, 207, 0.4));
     transform: translateY(-2px);
+    border-color: rgba(100, 127, 188, 0.5);
 }
 
 /* Skills Checklist Styles */
@@ -118,8 +121,8 @@
 }
 
 .skill-item {
-    background: #f8f9fa;
-    border: 1px solid #dee2e6;
+    background: #FAFDD6;
+    border: 1px solid rgba(100, 127, 188, 0.3);
     border-radius: 8px;
     padding: 1rem;
     margin-bottom: 0.75rem;
@@ -141,50 +144,55 @@
 
 .skill-title {
     font-weight: 600;
-    color: #333;
+    color: #647FBC;
     margin-bottom: 0.5rem;
 }
 
 .skill-description {
-    color: #666;
+    color: #647FBC;
+    opacity: 0.8;
     line-height: 1.5;
     margin-left: 2rem;
     font-size: 0.9rem;
 }
 
 .progress-summary {
-    background: #e3f2fd;
-    border: 1px solid #bbdefb;
+    background: linear-gradient(135deg, rgba(145, 173, 200, 0.3), rgba(174, 214, 207, 0.3));
+    border: 1px solid rgba(100, 127, 188, 0.3);
     border-radius: 8px;
     padding: 1rem;
     text-align: center;
     margin-top: 1rem;
     font-weight: 600;
-    color: #1976d2;
+    color: #647FBC;
 }
 
 /* Status Badge Styles */
 .status-badge {
-    padding: 0.25rem 0.75rem;
-    border-radius: 12px;
+    padding: 0.4rem 1rem;
+    border-radius: 15px;
     font-size: 0.875rem;
     font-weight: 600;
     text-transform: capitalize;
+    margin-left: 1rem;
 }
 
 .status-badge.not-started {
-    background: #f5f5f5;
-    color: #666;
+    background: linear-gradient(135deg, rgba(145, 173, 200, 0.3), rgba(174, 214, 207, 0.3));
+    color: #647FBC;
+    border: 1px solid rgba(100, 127, 188, 0.3);
 }
 
 .status-badge.in-progress {
-    background: #fff3cd;
-    color: #856404;
+    background: linear-gradient(135deg, rgba(145, 173, 200, 0.4), rgba(174, 214, 207, 0.4));
+    color: #647FBC;
+    border: 1px solid rgba(100, 127, 188, 0.4);
 }
 
 .status-badge.completed {
-    background: #d4edda;
-    color: #155724;
+    background: linear-gradient(135deg, #647FBC, #91ADC8);
+    color: white;
+    border: 1px solid #647FBC;
 }
 
 /* Step Details Modal Content */
@@ -203,18 +211,20 @@
 
 /* Checked skill styling */
 .skill-item:has(.skill-checkbox:checked) {
-    background: #e8f5e8;
-    border-color: #28a745;
+    background: #F0F3C4;
+    border-color: #647FBC;
 }
 
 .skill-item:has(.skill-checkbox:checked) .skill-title {
     text-decoration: line-through;
-    color: #28a745;
+    color: #647FBC;
+    opacity: 0.6;
 }
 
 .skill-item:has(.skill-checkbox:checked) .skill-description {
     text-decoration: line-through;
-    color: #6c757d;
+    color: #647FBC;
+    opacity: 0.5;
 }
 
 /* Responsive Roadmap */

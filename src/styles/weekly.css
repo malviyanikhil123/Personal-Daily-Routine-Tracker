@@ -7,8 +7,8 @@
 
 /* Auto-reset information */
 .auto-reset-info {
-    background: linear-gradient(135deg, #e3f2fd 0%, #f1f8e9 100%);
-    border: 1px solid #81c784;
+    background: linear-gradient(135deg, rgba(145, 173, 200, 0.3), rgba(174, 214, 207, 0.3));
+    border: 1px solid #91ADC8;
     border-radius: 10px;
     padding: 1rem 1.5rem;
     margin-bottom: 1.5rem;
@@ -16,11 +16,11 @@
     align-items: center;
     gap: 0.75rem;
     font-size: 0.95rem;
-    color: #2e7d32;
+    color: #647FBC;
 }
 
 .auto-reset-info i {
-    color: #4caf50;
+    color: #647FBC;
     font-size: 1.1rem;
 }
 
@@ -29,17 +29,17 @@
 }
 
 .day-card {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(174, 214, 207, 0.95);
     border-radius: 15px;
     padding: 1.5rem;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(100, 127, 188, 0.15);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
 }
 
 .day-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 35px rgba(100, 127, 188, 0.2);
 }
 
 .day-header {
@@ -48,18 +48,18 @@
     align-items: center;
     margin-bottom: 1rem;
     padding-bottom: 0.75rem;
-    border-bottom: 2px solid #f0f0f0;
+    border-bottom: 2px solid rgba(100, 127, 188, 0.3);
 }
 
 .day-name {
     font-size: 1.3rem;
     font-weight: 700;
-    color: #667eea;
+    color: #647FBC;
 }
 
 .day-progress {
     font-size: 0.9rem;
-    color: #666;
+    color: #647FBC;
     font-weight: 600;
 }
 
@@ -74,14 +74,14 @@
     align-items: flex-start;
     gap: 0.75rem;
     padding: 0.75rem;
-    background: #f8f9fa;
+    background: rgba(250, 253, 214, 0.7);
     border-radius: 8px;
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .task-item:hover {
-    background: #e9ecef;
+    background: rgba(145, 173, 200, 0.3);
 }
 
 .task-checkbox {
@@ -94,7 +94,7 @@
 .task-text {
     flex: 1;
     font-weight: 500;
-    color: #333;
+    color: #647FBC;
 }
 
 .task-time {

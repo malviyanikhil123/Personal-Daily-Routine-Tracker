@@ -7,16 +7,16 @@
 
 .log-controls select {
     padding: 0.5rem 1rem;
-    border: 2px solid #667eea;
+    border: 2px solid #647FBC;
     border-radius: 5px;
-    background: white;
-    color: #333;
+    background: #AED6CF;
+    color: #647FBC;
     font-weight: 600;
 }
 
-.export-btn, .complete-week-btn {
+.export-btn {
     padding: 0.5rem 1rem;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #647FBC, #91ADC8);
     color: white;
     border: none;
     border-radius: 5px;
@@ -28,17 +28,9 @@
     transition: all 0.3s ease;
 }
 
-.export-btn:hover, .complete-week-btn:hover {
+.export-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-}
-
-.complete-week-btn {
-    background: linear-gradient(135deg, #28a745, #20c997);
-}
-
-.complete-week-btn:hover {
-    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+    box-shadow: 0 4px 15px rgba(145, 173, 200, 0.4);
 }
 
 .logs-container {
@@ -48,10 +40,10 @@
 }
 
 .daily-summary {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(174, 214, 207, 0.95);
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(100, 127, 188, 0.15);
 }
 
 .summary-grid {
@@ -109,15 +101,15 @@
 
 /* Historical Summary */
 .historical-summary {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(174, 214, 207, 0.95);
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(100, 127, 188, 0.15);
     margin-bottom: 2rem;
 }
 
 .historical-summary h3 {
-    color: #6c757d;
+    color: #647FBC;
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     display: flex;
@@ -132,27 +124,27 @@
 }
 
 .historical-stat-card {
-    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    background: linear-gradient(135deg, rgba(145, 173, 200, 0.3), rgba(174, 214, 207, 0.3));
     padding: 1.5rem;
     border-radius: 12px;
     text-align: center;
-    border: 2px solid #dee2e6;
+    border: 2px solid rgba(100, 127, 188, 0.3);
     transition: all 0.3s ease;
 }
 
 .historical-stat-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(100, 127, 188, 0.2);
 }
 
 .historical-stat-card.expired {
-    background: linear-gradient(135deg, #fff5f5, #fed7d7);
-    border-color: #feb2b2;
+    background: linear-gradient(135deg, rgba(145, 173, 200, 0.4), rgba(174, 214, 207, 0.4));
+    border-color: rgba(100, 127, 188, 0.5);
 }
 
 .historical-stat-card.average {
-    background: linear-gradient(135deg, #f0f4ff, #dbeafe);
-    border-color: #a5b4fc;
+    background: linear-gradient(135deg, rgba(145, 173, 200, 0.4), rgba(174, 214, 207, 0.4));
+    border-color: rgba(100, 127, 188, 0.5);
 }
 
 .historical-stat-icon {
@@ -164,37 +156,45 @@
 .historical-stat-value {
     font-size: 2rem;
     font-weight: 700;
-    color: #495057;
+    color: #647FBC;
     margin-bottom: 0.5rem;
 }
 
 .historical-stat-card.expired .historical-stat-value {
-    color: #dc3545;
+    color: #647FBC;
 }
 
 .historical-stat-card.average .historical-stat-value {
-    color: #6366f1;
+    color: #647FBC;
 }
 
 .historical-stat-label {
     font-size: 0.9rem;
-    color: #6c757d;
+    color: #647FBC;
     font-weight: 600;
 }
 
 .weekly-stats {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(174, 214, 207, 0.95);
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(100, 127, 188, 0.15);
+}
+
+.roadmap-stats {
+    background: rgba(174, 214, 207, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(100, 127, 188, 0.15);
+    margin-top: 1.5rem;
 }
 
 .overall-progress-section {
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background: linear-gradient(135deg, #f8f9ff, #e8f2ff);
+    background: linear-gradient(135deg, rgba(145, 173, 200, 0.3), rgba(174, 214, 207, 0.3));
     border-radius: 12px;
-    border: 1px solid #e0e6ff;
+    border: 1px solid rgba(100, 127, 188, 0.3);
 }
 
 .progress-header {
@@ -203,19 +203,19 @@
     align-items: center;
     margin-bottom: 1rem;
     font-weight: 600;
-    color: #333;
+    color: #647FBC;
 }
 
 .progress-percentage {
     font-size: 1.2rem;
     font-weight: 700;
-    color: #667eea;
+    color: #647FBC;
 }
 
 .progress-bar-container {
     width: 100%;
     height: 12px;
-    background: #e0e0e0;
+    background: rgba(145, 173, 200, 0.3);
     border-radius: 6px;
     overflow: hidden;
     margin-bottom: 0.5rem;
@@ -229,7 +229,7 @@
 
 .progress-details {
     text-align: center;
-    color: #666;
+    color: #647FBC;
     font-size: 0.9rem;
 }
 
@@ -240,7 +240,7 @@
 }
 
 .stat-card {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #647FBC, #91ADC8);
     color: white;
     padding: 1.5rem;
     border-radius: 15px;
@@ -268,7 +268,7 @@
 
 .stat-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 30px rgba(100, 127, 188, 0.3);
 }
 
 .stat-icon {
@@ -278,23 +278,23 @@
 }
 
 .stat-card.warning {
-    background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+    background: linear-gradient(135deg, #91ADC8, #647FBC);
 }
 
 .stat-card.pending {
-    background: linear-gradient(135deg, #feca57, #ff9ff3);
+    background: linear-gradient(135deg, #AED6CF, #91ADC8);
 }
 
 .stat-card.devops {
-    background: linear-gradient(135deg, #3498db, #2980b9);
+    background: linear-gradient(135deg, #647FBC, #91ADC8);
 }
 
 .stat-card.cpp {
-    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    background: linear-gradient(135deg, #91ADC8, #647FBC);
 }
 
 .stat-card.roadmap-total {
-    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    background: linear-gradient(135deg, #647FBC, #AED6CF);
 }
 
 .stat-value {
@@ -310,10 +310,10 @@
 
 /* Incomplete Tasks Section */
 .incomplete-tasks {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(174, 214, 207, 0.95);
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(100, 127, 188, 0.15);
     margin-top: 2rem;
 }
 
@@ -331,9 +331,9 @@
     justify-content: center;
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background: linear-gradient(135deg, #fff5f5, #fee);
+    background: linear-gradient(135deg, rgba(145, 173, 200, 0.3), rgba(174, 214, 207, 0.3));
     border-radius: 12px;
-    border: 1px solid #fecaca;
+    border: 1px solid rgba(100, 127, 188, 0.3);
 }
 
 .expired-count-visual {
@@ -446,7 +446,7 @@
 .no-incomplete-tasks {
     text-align: center;
     padding: 3rem;
-    color: #28a745;
+    color: #647FBC;
 }
 
 .no-incomplete-tasks i {
@@ -459,7 +459,7 @@
 .no-incomplete-tasks p {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #666;
+    color: #647FBC;
 }
 
 /* Responsive Logs */
@@ -475,6 +475,7 @@
     
     .daily-summary,
     .weekly-stats,
+    .roadmap-stats,
     .incomplete-tasks {
         padding: 1.5rem;
     }
@@ -495,6 +496,7 @@
 @media (max-width: 480px) {
     .daily-summary,
     .weekly-stats,
+    .roadmap-stats,
     .incomplete-tasks {
         padding: 1rem;
     }

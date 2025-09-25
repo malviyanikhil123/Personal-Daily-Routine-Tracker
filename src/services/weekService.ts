@@ -5,11 +5,12 @@ export const weekService: WeekService = {
     const now = new Date();
     // Get current day of week (0 = Sunday, 1 = Monday, etc.)
     const dayOfWeek = now.getDay();
-    // Calculate days to subtract to get to Monday
-    // If today is Sunday (0), we want Monday of this week (tomorrow), so subtract -1 (add 1)
-    // If today is Monday (1), we want today, so subtract 0
-    // If today is Tuesday (2), we want yesterday, so subtract 1
-    const daysToMonday = dayOfWeek === 0 ? -1 : dayOfWeek - 1;
+    // Calculate days to subtract to get to Monday (start of week)
+    // Sunday (0) should go to next Monday, so subtract 6 days to get previous Monday
+    // Monday (1) should stay as is, so subtract 0 days
+    // Tuesday (2) should go to previous Monday, so subtract 1 day
+    // ... and so on
+    const daysToMonday = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
     
     const startOfWeek = new Date(now);
     startOfWeek.setDate(now.getDate() - daysToMonday);

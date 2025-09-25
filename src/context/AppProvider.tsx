@@ -83,52 +83,6 @@ function appReducer(state: AppState, action: AppAction): AppState {
     case 'SET_WEEKLY_HISTORIES':
       return { ...state, weeklyHistories: action.payload };
     
-    case 'COMPLETE_WEEK': {
-      const { weekKey, newWeekKey } = action.payload;
-      const weekTasks = state.weeklyTasks[weekKey];
-      
-      if (!weekTasks) return state;
-      
-      // Calculate stats for the completed week
-      let totalTasks = 0;
-      let completedTasks = 0;
-      let expiredTasks = 0;
-      
-      Object.values(weekTasks).forEach(dayTasks => {
-        totalTasks += dayTasks.length;
-        completedTasks += dayTasks.filter(task => task.completed).length;
-        expiredTasks += dayTasks.filter(task => !task.completed && task.isExpired).length;
-      });
-      
-      const completionRate = totalTasks > 0 ? Math.round((completedTasks / totalTasks) * 100) : 0;
-      
-      // Add week to history
-      const newHistory = {
-        ...state.weeklyHistories,
-        [weekKey]: {
-          weekKey,
-          weekRange: weekKey, // This will be formatted by weekService
-          totalTasks,
-          completedTasks,
-          expiredTasks,
-          completionRate,
-          endDate: new Date().toISOString()
-        }
-      };
-      
-      // Remove the completed week from weeklyTasks and create new week
-      const newWeeklyTasks = { ...state.weeklyTasks };
-      delete newWeeklyTasks[weekKey];
-      
-      return {
-        ...state,
-        weeklyHistories: newHistory,
-        weeklyTasks: newWeeklyTasks,
-        currentWeek: newWeekKey,
-        currentWeekStart: newWeekKey
-      };
-    }
-
     case 'AUTO_RESET_WEEK': {
       const { oldWeekKey, newWeekKey, newWeekStart } = action.payload;
       const oldWeekTasks = state.weeklyTasks[oldWeekKey];
@@ -149,7 +103,8 @@ function appReducer(state: AppState, action: AppAction): AppState {
       Object.values(oldWeekTasks).forEach(dayTasks => {
         totalTasks += dayTasks.length;
         completedTasks += dayTasks.filter(task => task.completed).length;
-        expiredTasks += dayTasks.filter(task => !task.completed && task.isExpired).length;
+        // When week ends, ALL uncompleted tasks should be counted as expired
+        expiredTasks += dayTasks.filter(task => !task.completed).length;
       });
       
       const completionRate = totalTasks > 0 ? Math.round((completedTasks / totalTasks) * 100) : 0;
@@ -216,6 +171,37 @@ export function AppProvider({ children }: AppProviderProps) {
   };
 
   const [state, dispatch] = useReducer(appReducer, initialState);
+
+  // One-time migration to fix historical expired tasks data
+  useEffect(() => {
+    const migrationKey = 'expiredTasksMigrationV1';
+    const hasMigrated = localStorage.getItem(migrationKey);
+    
+    if (!hasMigrated && Object.keys(state.weeklyHistories).length > 0) {
+      let needsMigration = false;
+      const migratedHistories = { ...state.weeklyHistories };
+      
+      Object.keys(migratedHistories).forEach(weekKey => {
+        const week = migratedHistories[weekKey];
+        // If week has tasks but 0 expired tasks, it likely needs migration
+        if (week.totalTasks > 0 && week.expiredTasks === 0 && week.completedTasks < week.totalTasks) {
+          needsMigration = true;
+          migratedHistories[weekKey] = {
+            ...week,
+            expiredTasks: week.totalTasks - week.completedTasks
+          };
+        }
+      });
+      
+      if (needsMigration) {
+        dispatch({ type: 'SET_WEEKLY_HISTORIES', payload: migratedHistories });
+        localStorage.setItem(migrationKey, 'true');
+        console.log('✅ Migrated historical expired tasks data');
+      } else {
+        localStorage.setItem(migrationKey, 'true');
+      }
+    }
+  }, [state.weeklyHistories]);
 
   // Auto-save functionality - save to localStorage every 30 seconds
   useEffect(() => {
@@ -411,24 +397,6 @@ export function AppProvider({ children }: AppProviderProps) {
     showToast('🔄 Roadmaps refreshed with latest data!', 'success');
   };
 
-  const completeWeek = () => {
-    // Generate new week key (next week)
-    const currentDate = new Date();
-    const nextWeek = new Date(currentDate.getTime() + 7 * 24 * 60 * 60 * 1000);
-    const nextWeekKey = `${nextWeek.getFullYear()}-W${Math.ceil(nextWeek.getDate() / 7)}`;
-    
-    // Dispatch complete week action
-    dispatch({ 
-      type: 'COMPLETE_WEEK', 
-      payload: { 
-        weekKey: state.currentWeek, 
-        newWeekKey: nextWeekKey 
-      } 
-    });
-    
-    showToast(`✅ Week completed! Expired tasks archived. Starting new week.`, 'success');
-  };
-
   const value: AppContextType = {
     state,
     dispatch,
@@ -438,7 +406,6 @@ export function AppProvider({ children }: AppProviderProps) {
     toggleWeeklyTask,
     markExpiredTasks: markExpiredTasksAction,
     forceRefreshRoadmaps,
-    completeWeek,
     checkAndResetWeek
   };
 

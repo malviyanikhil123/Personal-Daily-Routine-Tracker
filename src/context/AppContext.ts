@@ -13,7 +13,6 @@ export type AppAction =
   | { type: 'SET_DAILY_LOGS'; payload: DailyLogs }
   | { type: 'MARK_EXPIRED_TASKS'; payload: WeeklyTasks }
   | { type: 'SET_WEEKLY_HISTORIES'; payload: WeeklyHistories }
-  | { type: 'COMPLETE_WEEK'; payload: { weekKey: string; newWeekKey: string } }
   | { type: 'AUTO_RESET_WEEK'; payload: { oldWeekKey: string; newWeekKey: string; newWeekStart: string } }
   | { type: 'SET_CURRENT_WEEK_START'; payload: string };
 
@@ -27,7 +26,6 @@ export interface AppContextType {
   toggleWeeklyTask: (day: string, taskId: string) => void;
   markExpiredTasks: () => void;
   forceRefreshRoadmaps: () => void;
-  completeWeek: () => void;
   checkAndResetWeek: () => void;
 }
 

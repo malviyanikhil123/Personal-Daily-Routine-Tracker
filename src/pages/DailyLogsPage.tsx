@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useApp } from '../hooks';
 import { calculateDayProgress, getIncompleteTasks } from '../utils';
 import { weekService } from '../services';
 
 const DailyLogsPage: React.FC = () => {
-  const { state, completeWeek } = useApp();
+  const { state, markExpiredTasks } = useApp();
+  
+  // Check for expired tasks when the page loads
+  useEffect(() => {
+    markExpiredTasks();
+  }, [markExpiredTasks]);
   
   const currentWeekTasks = state.weeklyTasks[state.currentWeek] || {};
   const incompleteTasks = getIncompleteTasks(state.weeklyTasks, state.currentWeek);
@@ -82,10 +87,6 @@ const DailyLogsPage: React.FC = () => {
           <button className="export-btn" onClick={handleExportLogs}>
             <i className="fas fa-download"></i>
             Export Logs
-          </button>
-          <button className="complete-week-btn" onClick={completeWeek}>
-            <i className="fas fa-check-circle"></i>
-            Complete Week
           </button>
         </div>
       </div>
@@ -188,6 +189,13 @@ const DailyLogsPage: React.FC = () => {
               <div className="stat-value">{weeklyStats.completedTasks}</div>
               <div className="stat-label">Tasks Completed</div>
             </div>
+          </div>
+        </div>
+
+        {/* Learning Progress */}
+        <div className="roadmap-stats">
+          <h3>🎓 Learning Progress</h3>
+          <div className="stats-grid">
             <div className="stat-card devops">
               <div className="stat-icon">🔧</div>
               <div className="stat-value">{weeklyStats.devopsCompletedSteps}</div>
