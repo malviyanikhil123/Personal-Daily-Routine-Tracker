@@ -260,51 +260,51 @@ export const cppDsaRoadmapData: RoadmapStep[] = [
 export const weeklyScheduleData: WeeklyScheduleData = {
   "Monday": [
     { time: "07:00-08:00", task: "DSA Practice", type: "learning" },
-    { time: "20:00-21:30", task: "Side Project Development", type: "project" },
-    { time: "21:30-22:00", task: "DSA Revision / 1 extra problem", type: "learning" },
-    { time: "22:00-22:30", task: "Wind down: plan next day, light English reading", type: "planning" }
+    { time: "21:00-22:30", task: "Side Project Development", type: "project" },
+    { time: "22:30-23:00", task: "DSA Revision / 1 extra problem", type: "learning" },
+    { time: "23:00-23:30", task: "Wind down: plan next day, light English reading", type: "planning" }
   ],
   "Tuesday": [
     { time: "07:00-08:00", task: "DSA Practice", type: "learning" },
-    { time: "20:00-21:30", task: "Side Project Development", type: "project" },
-    { time: "21:30-22:00", task: "DSA Revision / 1 extra problem", type: "learning" },
-    { time: "22:00-22:30", task: "Wind down: plan next day, light English reading", type: "planning" }
+    { time: "21:00-22:30", task: "Side Project Development", type: "project" },
+    { time: "22:30-23:00", task: "DSA Revision / 1 extra problem", type: "learning" },
+    { time: "23:00-23:30", task: "Wind down: plan next day, light English reading", type: "planning" }
   ],
   "Wednesday": [
     { time: "07:00-08:00", task: "DSA Practice", type: "learning" },
-    { time: "20:00-21:30", task: "Side Project Development", type: "project" },
-    { time: "21:30-22:00", task: "DSA Revision / 1 extra problem", type: "learning" },
-    { time: "22:00-22:30", task: "Wind down: plan next day, light English reading", type: "planning" }
+    { time: "21:00-22:30", task: "Side Project Development", type: "project" },
+    { time: "22:30-23:00", task: "DSA Revision / 1 extra problem", type: "learning" },
+    { time: "23:00-23:30", task: "Wind down: plan next day, light English reading", type: "planning" }
   ],
   "Thursday": [
     { time: "07:00-08:00", task: "DSA Practice", type: "learning" },
-    { time: "20:00-21:30", task: "Side Project Development", type: "project" },
-    { time: "21:30-22:00", task: "DSA Revision / 1 extra problem", type: "learning" },
-    { time: "22:00-22:30", task: "Wind down: plan next day, light English reading", type: "planning" }
+    { time: "21:00-22:30", task: "Side Project Development", type: "project" },
+    { time: "22:30-23:00", task: "DSA Revision / 1 extra problem", type: "learning" },
+    { time: "23:00-23:30", task: "Wind down: plan next day, light English reading", type: "planning" }
   ],
   "Friday": [
     { time: "07:00-08:00", task: "DSA Practice", type: "learning" },
-    { time: "20:00-21:30", task: "Side Project Development", type: "project" },
-    { time: "21:30-22:00", task: "DSA Revision / 1 extra problem", type: "learning" },
-    { time: "22:00-22:30", task: "Wind down: plan next day, light English reading", type: "planning" }
+    { time: "21:00-22:30", task: "Side Project Development", type: "project" },
+    { time: "22:30-23:00", task: "DSA Revision / 1 extra problem", type: "learning" },
+    { time: "23:00-23:30", task: "Wind down: plan next day, light English reading", type: "planning" }
   ],
   "Saturday": [
-    { time: "07:00-09:00", task: "DevOps Learning", type: "learning" },
+    { time: "07:00-08:00", task: "DevOps Learning", type: "learning" },
     { time: "09:00-10:30", task: "Side Project", type: "project" },
     { time: "10:30-11:30", task: "English Practice", type: "learning" },
     { time: "11:30-12:00", task: "DSA Quick Practice (1–2 problems)", type: "learning" },
     { time: "12:00-13:00", task: "Lunch + Break", type: "break" },
     { time: "13:00-16:00", task: "DevOps Hands-on Labs", type: "learning" },
-    { time: "17:00-20:00", task: "Side Project", type: "project" },
+    { time: "17:00-19:30", task: "Side Project", type: "project" },
     { time: "21:00-22:00", task: "DevOps Revision / Notes", type: "learning" }
   ],
   "Sunday": [
-    { time: "07:00-09:00", task: "DevOps Practice", type: "learning" },
+    { time: "07:00-08:00", task: "DevOps Practice", type: "learning" },
     { time: "09:00-10:30", task: "Side Project", type: "project" },
     { time: "10:30-11:30", task: "English Practice", type: "learning" },
     { time: "11:30-12:00", task: "DSA Quick Practice (1–2 problems)", type: "learning" },
     { time: "13:00-16:00", task: "DevOps End-to-End Project", type: "learning" },
-    { time: "17:00-20:00", task: "Side Project", type: "project" },
+    { time: "17:00-19:30", task: "Side Project", type: "project" },
     { time: "21:00-22:00", task: "Weekly Review + Plan Ahead", type: "planning" }
   ]
 };
