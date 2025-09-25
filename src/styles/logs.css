@@ -7,12 +7,10 @@
 
 .log-controls select {
     padding: 0.5rem 1rem;
-    border: 2px solid rgba(102, 126, 234, 0.8);
+    border: 2px solid #667eea;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    color: #ffffff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    background: white;
+    color: #333;
     font-weight: 600;
 }
 
@@ -50,12 +48,10 @@
 }
 
 .daily-summary {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.95);
     padding: 2rem;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .summary-grid {
@@ -68,22 +64,18 @@
     text-align: center;
     padding: 1.5rem;
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: #f8f9fa;
     transition: all 0.3s ease;
 }
 
 .day-summary:hover {
     transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .day-summary.today {
-    background: rgba(33, 150, 243, 0.2);
-    border: 2px solid rgba(33, 150, 243, 0.6);
-    backdrop-filter: blur(16px);
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border: 2px solid #2196f3;
 }
 
 .day-summary.completed {
@@ -117,22 +109,20 @@
 
 /* Historical Summary */
 .historical-summary {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.95);
     padding: 2rem;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
 }
 
 .historical-summary h3 {
-    color: #ffffff;
+    color: #6c757d;
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    gap: 0.5rem;
 }
 
 .historical-stats {
@@ -142,29 +132,27 @@
 }
 
 .historical-stat-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
     padding: 1.5rem;
-    border-radius: 16px;
+    border-radius: 12px;
     text-align: center;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid #dee2e6;
     transition: all 0.3s ease;
 }
 
 .historical-stat-card:hover {
     transform: translateY(-3px);
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .historical-stat-card.expired {
-    background: rgba(220, 53, 69, 0.1);
-    border-color: rgba(220, 53, 69, 0.4);
+    background: linear-gradient(135deg, #fff5f5, #fed7d7);
+    border-color: #feb2b2;
 }
 
 .historical-stat-card.average {
-    background: rgba(59, 130, 246, 0.1);
-    border-color: rgba(59, 130, 246, 0.4);
+    background: linear-gradient(135deg, #f0f4ff, #dbeafe);
+    border-color: #a5b4fc;
 }
 
 .historical-stat-icon {
@@ -195,22 +183,18 @@
 }
 
 .weekly-stats {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.95);
     padding: 2rem;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .overall-progress-section {
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(16px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #f8f9ff, #e8f2ff);
+    border-radius: 12px;
+    border: 1px solid #e0e6ff;
 }
 
 .progress-header {
@@ -219,23 +203,20 @@
     align-items: center;
     margin-bottom: 1rem;
     font-weight: 600;
-    color: #ffffff;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    color: #333;
 }
 
 .progress-percentage {
     font-size: 1.2rem;
     font-weight: 700;
-    color: #ffffff;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    color: #667eea;
 }
 
 .progress-bar-container {
     width: 100%;
     height: 12px;
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
+    background: #e0e0e0;
+    border-radius: 6px;
     overflow: hidden;
     margin-bottom: 0.5rem;
 }
@@ -259,11 +240,8 @@
 }
 
 .stat-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     padding: 1.5rem;
     border-radius: 15px;
     text-align: center;
@@ -300,28 +278,23 @@
 }
 
 .stat-card.warning {
-    border-left: 4px solid #ff6b6b;
-    background: rgba(255, 107, 107, 0.1);
+    background: linear-gradient(135deg, #ff6b6b, #ff8e53);
 }
 
 .stat-card.pending {
-    border-left: 4px solid #feca57;
-    background: rgba(254, 202, 87, 0.1);
+    background: linear-gradient(135deg, #feca57, #ff9ff3);
 }
 
 .stat-card.devops {
-    border-left: 4px solid #3498db;
-    background: rgba(52, 152, 219, 0.1);
+    background: linear-gradient(135deg, #3498db, #2980b9);
 }
 
 .stat-card.cpp {
-    border-left: 4px solid #6f42c1;
-    background: rgba(111, 66, 193, 0.1);
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
 }
 
 .stat-card.roadmap-total {
-    border-left: 4px solid #9b59b6;
-    background: rgba(155, 89, 182, 0.1);
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
 }
 
 .stat-value {
@@ -337,18 +310,15 @@
 
 /* Incomplete Tasks Section */
 .incomplete-tasks {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.95);
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     margin-top: 2rem;
 }
 
 .incomplete-tasks h3 {
-    color: #ffffff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    color: #dc3545;
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     display: flex;
@@ -361,10 +331,9 @@
     justify-content: center;
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background: rgba(220, 53, 69, 0.1);
-    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, #fff5f5, #fee);
     border-radius: 12px;
-    border: 1px solid rgba(220, 53, 69, 0.3);
+    border: 1px solid #fecaca;
 }
 
 .expired-count-visual {
@@ -392,8 +361,7 @@
 
 .expired-text {
     font-weight: 600;
-    color: #ffffff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    color: #dc3545;
     font-size: 1rem;
 }
 
@@ -544,385 +512,4 @@
         align-items: stretch;
         gap: 0.5rem;
     }
-}
-
-/* New styles for separated roadmap sections */
-.weekly-tasks-stats,
-.roadmap-stats,
-.combined-roadmap-stats {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(16px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.weekly-tasks-stats {
-    background: rgba(102, 126, 234, 0.1);
-    border-color: rgba(102, 126, 234, 0.3);
-}
-
-.weekly-tasks-stats h4 {
-    color: #ffffff;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.roadmap-stats.devops-section {
-    background: rgba(23, 162, 184, 0.1);
-    border-color: rgba(23, 162, 184, 0.4);
-}
-
-.roadmap-stats.devops-section h4 {
-    color: #ffffff;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.roadmap-stats.cpp-section {
-    background: rgba(111, 66, 193, 0.1);
-    border-color: rgba(111, 66, 193, 0.4);
-}
-
-.roadmap-stats.cpp-section h4 {
-    color: #ffffff;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.combined-roadmap-stats {
-    background: rgba(155, 89, 182, 0.1);
-    border-color: rgba(155, 89, 182, 0.4);
-}
-
-.combined-roadmap-stats h4 {
-    color: #ffffff;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.roadmap-progress-section {
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(16px);
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.progress-bar-fill.devops {
-    background: linear-gradient(90deg, #17a2b8, #138496) !important;
-}
-
-.progress-bar-fill.cpp {
-    background: linear-gradient(90deg, #6f42c1, #5a32a3) !important;
-}
-
-/* Roadmap Skills Today Section */
-.roadmap-skills-today {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(16px);
-    padding: 2rem;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid rgba(102, 126, 234, 0.8);
-}
-
-.skills-progress-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-top: 1.5rem;
-}
-
-.skills-section {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    padding: 1.5rem;
-    border-radius: 16px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-.skills-section.devops {
-    border-color: rgba(253, 126, 20, 0.6);
-    background: rgba(253, 126, 20, 0.1);
-}
-
-.skills-section.cpp {
-    border-color: rgba(111, 66, 193, 0.6);
-    background: rgba(111, 66, 193, 0.1);
-}
-
-.skills-section h4 {
-    margin: 0 0 1rem 0;
-    color: #ffffff;
-    font-size: 1.1rem;
-    font-weight: 700;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-.skills-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.skill-completion-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease;
-}
-
-.skill-completion-item:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.skill-icon {
-    font-size: 1.2rem;
-    color: #28a745;
-    flex-shrink: 0;
-}
-
-.skill-details {
-    flex: 1;
-}
-
-.skill-name {
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 0.25rem;
-    font-size: 0.95rem;
-}
-
-.skill-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    font-size: 0.8rem;
-    color: #666;
-}
-
-.step-title {
-    font-style: italic;
-    color: #667eea;
-}
-
-.completion-time {
-    color: #28a745;
-    font-weight: 500;
-}
-
-/* Responsive adjustments for roadmap skills */
-@media (max-width: 768px) {
-    .skills-progress-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .skill-completion-item {
-        padding: 0.75rem;
-    }
-    
-    .skill-name {
-        font-size: 0.9rem;
-    }
-    
-    .skill-meta {
-        font-size: 0.75rem;
-    }
-}
-
-/* Global text visibility improvements for transparent backgrounds */
-.daily-summary h2,
-.day-summary h3,
-.day-summary h4,
-.log-entry h3,
-.log-entry h4 {
-    color: #ffffff !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.day-summary p,
-.day-summary span,
-.log-entry p,
-.log-entry span,
-.task-count,
-.completion-rate {
-    color: rgba(255, 255, 255, 0.9) !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-.log-controls select {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    color: #ffffff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    border: 2px solid rgba(102, 126, 234, 0.8);
-}
-
-/* Comprehensive text visibility for all summary sections */
-.weekly-stats h2,
-.weekly-stats h3,
-.weekly-stats h4,
-.overall-progress-section h2,
-.overall-progress-section h3,
-.roadmap-progress-section h2,
-.roadmap-progress-section h3,
-.roadmap-skills-today h2,
-.roadmap-skills-today h3 {
-    color: #ffffff !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.weekly-stats p,
-.weekly-stats span,
-.weekly-stats div,
-.overall-progress-section p,
-.overall-progress-section span,
-.overall-progress-section div,
-.roadmap-progress-section p,
-.roadmap-progress-section span,
-.roadmap-progress-section div,
-.roadmap-skills-today p,
-.roadmap-skills-today span,
-.roadmap-skills-today div {
-    color: rgba(255, 255, 255, 0.9) !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-/* Specific elements for progress sections */
-.progress-details,
-.skill-completion-item,
-.skill-name,
-.skill-meta {
-    color: rgba(255, 255, 255, 0.9) !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-/* Summary card improvements */
-.summary-card h3,
-.summary-card h4 {
-    color: #ffffff !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.summary-card p,
-.summary-card span {
-    color: rgba(255, 255, 255, 0.9) !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-/* Historical summary sections */
-.historical-summary h2,
-.historical-summary h3,
-.historical-summary h4,
-.historical-stat-card h3,
-.historical-stat-card h4 {
-    color: #ffffff !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.historical-summary p,
-.historical-summary span,
-.historical-stat-card p,
-.historical-stat-card span,
-.historical-stat-icon {
-    color: rgba(255, 255, 255, 0.9) !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-/* Additional section improvements */
-.stats-section h2,
-.stats-section h3,
-.expired-section h2,
-.expired-section h3,
-.week-summary h2,
-.week-summary h3 {
-    color: #ffffff !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.stats-section p,
-.stats-section span,
-.expired-section p,
-.expired-section span,
-.week-summary p,
-.week-summary span {
-    color: rgba(255, 255, 255, 0.9) !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-/* Universal transparent background for any remaining sections */
-.summary-section,
-.statistics-section,
-.progress-section,
-.roadmap-section,
-.week-section,
-.expired-tasks-section {
-    background: rgba(255, 255, 255, 0.1) !important;
-    backdrop-filter: blur(16px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-}
-
-/* Ensure all text in these sections is visible */
-.summary-section *,
-.statistics-section *,
-.progress-section *,
-.roadmap-section *,
-.week-section *,
-.expired-tasks-section * {
-    color: rgba(255, 255, 255, 0.9) !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-.summary-section h1,
-.summary-section h2,
-.summary-section h3,
-.statistics-section h1,
-.statistics-section h2,
-.statistics-section h3,
-.progress-section h1,
-.progress-section h2,
-.progress-section h3,
-.roadmap-section h1,
-.roadmap-section h2,
-.roadmap-section h3,
-.week-section h1,
-.week-section h2,
-.week-section h3,
-.expired-tasks-section h1,
-.expired-tasks-section h2,
-.expired-tasks-section h3 {
-    color: #ffffff !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }

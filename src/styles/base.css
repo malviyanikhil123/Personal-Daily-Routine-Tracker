@@ -40,13 +40,11 @@ body {
 
 /* Section Headers */
 .section-header {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(16px);
+    background: white;
     padding: 2rem;
-    border-radius: 20px;
+    border-radius: 15px;
     margin-bottom: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,10 +53,9 @@ body {
 }
 
 .section-header h2 {
-    color: #ffffff;
+    color: #667eea;
     font-size: 2rem;
     font-weight: 700;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .section-header h2 i {
@@ -91,16 +88,13 @@ body {
 }
 
 .btn-secondary {
-    background: rgba(255, 255, 255, 0.2);
-    color: #ffffff;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(8px);
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 255, 255, 0.6);
+    background: #667eea;
     color: white;
 }
 

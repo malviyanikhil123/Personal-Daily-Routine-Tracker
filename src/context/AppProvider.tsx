@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import type { AppState, StepStatus } from '../types';
 import { useLocalStorage, useToast, useWeekManagement } from '../hooks';
 import { devopsRoadmapData, cppDsaRoadmapData } from '../utils';
-import { markExpiredTasks, logTaskCompletion, logUndoneTask, logRoadmapSkillCompletion } from '../utils/helpers';
+import { markExpiredTasks, logTaskCompletion, logUndoneTask } from '../utils/helpers';
 import { weekService } from '../services';
 import { AppContext, type AppAction, type AppContextType } from './AppContext';
 
@@ -333,22 +333,6 @@ export function AppProvider({ children }: AppProviderProps) {
   const updateSkillChecked = (roadmapType: 'devops' | 'cpp', stepId: number, skill: string, checked: boolean) => {
     dispatch({ type: 'UPDATE_SKILL_CHECKED', payload: { roadmapType, stepId, skill, checked } });
     
-    // Log roadmap skill completion
-    const roadmap = roadmapType === 'devops' ? state.devopsRoadmap : state.cppDsaRoadmap;
-    const step = roadmap.find(s => s.id === stepId);
-    
-    if (step) {
-      const updatedLogs = logRoadmapSkillCompletion(
-        roadmapType,
-        stepId,
-        step.title,
-        skill,
-        checked,
-        state.dailyLogs
-      );
-      dispatch({ type: 'SET_DAILY_LOGS', payload: updatedLogs });
-    }
-    
     if (checked) {
       showToast(`✓ ${skill} marked as learned!`, 'success');
     }
@@ -405,7 +389,7 @@ export function AppProvider({ children }: AppProviderProps) {
     }
   };
 
-  const forceRefreshRoadmaps = useCallback(() => {
+  const forceRefreshRoadmaps = () => {
     // Remove roadmap data from localStorage to force refresh
     localStorage.removeItem('cppDsaRoadmap');
     localStorage.removeItem('devopsRoadmap');
@@ -422,21 +406,10 @@ export function AppProvider({ children }: AppProviderProps) {
     // Save fresh data to localStorage
     setDevopsRoadmap(freshDevopsRoadmap);
     setCppDsaRoadmap(freshCppDsaRoadmap);
-    localStorage.setItem('roadmapVersion', '4.0'); // Updated version for Step 9
+    localStorage.setItem('roadmapVersion', '3.0');
     
     showToast('🔄 Roadmaps refreshed with latest data!', 'success');
-  }, [setDevopsRoadmap, setCppDsaRoadmap, showToast]);
-
-  // Auto-refresh roadmaps if new version is available
-  useEffect(() => {
-    const currentVersion = localStorage.getItem('roadmapVersion');
-    const expectedVersion = '4.0'; // Version with Step 9 added
-    
-    if (currentVersion !== expectedVersion) {
-      // Automatically refresh roadmaps with new data
-      forceRefreshRoadmaps();
-    }
-  }, [forceRefreshRoadmaps]);
+  };
 
   const completeWeek = () => {
     // Generate new week key (next week)

@@ -28,11 +28,6 @@ const Header: React.FC<HeaderProps> = ({ currentTab, onTabChange }) => {
       id: 'logs' as TabType,
       icon: 'fas fa-chart-line',
       label: 'Daily Logs'
-    },
-    {
-      id: 'analytics' as TabType,
-      icon: 'fas fa-chart-bar',
-      label: 'Analytics'
     }
   ];
 
