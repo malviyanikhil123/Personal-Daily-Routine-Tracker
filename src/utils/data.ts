@@ -293,7 +293,6 @@ export const weeklyScheduleData: WeeklyScheduleData = {
     { time: "09:00-10:30", task: "Side Project", type: "project" },
     { time: "10:30-11:30", task: "English Practice", type: "learning" },
     { time: "11:30-12:00", task: "DSA Quick Practice (1–2 problems)", type: "learning" },
-    { time: "12:00-13:00", task: "Lunch + Break", type: "break" },
     { time: "13:00-16:00", task: "DevOps Hands-on Labs", type: "learning" },
     { time: "17:00-19:30", task: "Side Project", type: "project" },
     { time: "21:00-22:00", task: "DevOps Revision / Notes", type: "learning" }
